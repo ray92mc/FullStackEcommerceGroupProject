@@ -1,0 +1,21 @@
+{% include "dashboard/manager_navigation.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+
+<div class="container">
+
+
+
+<div class=" text-justify card-profile shadow p-3  mb-5  blueRefund" style="width: auto; cursor: pointer;">
+<h1 class="text-center">Add Vocuher</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|crispy}}
+    <button class="btn btn-success" type="submit">Save</button>
+</form>
+</div>
+</div>
+{% endblock content %}
